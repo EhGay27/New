@@ -23,7 +23,10 @@ class BankAccount
     // Method to withdraw funds from the account
     public function withdraw($amount)
     {
-        if ($this->balance -= $amount) {
+        if ($this->balance >= $amount) {
+            $this->balance -= $amount;
+            echo "Withdraw successful.<br>";
+        } else {
             echo "Insufficient Balance.<br>";
         }
     }
