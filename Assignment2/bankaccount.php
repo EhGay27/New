@@ -25,9 +25,9 @@ class BankAccount
     {
         if ($this->balance >= $amount) {
             $this->balance -= $amount;
-            echo "Withdraw successful.<br>";
+            echo "Withdraw successful.Amount : $amount<br>\n";
         } else {
-            echo "Insufficient Balance.<br>";
+            echo "Insufficient Balance.Cannot withdraw amount : $amount<br>\n";
         }
     }
 
@@ -51,7 +51,7 @@ $account = new BankAccount("123456789", 1000);
 $account->deposit(500);
 
 // Withdraw funds
-$account->withdraw(200);
+$account->withdraw(100);
 
 // Get the current balance
 $balance = $account->getBalance();
